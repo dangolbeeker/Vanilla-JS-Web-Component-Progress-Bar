@@ -4,15 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Progress Bar Vanilla Javascript Practise</title>
-</head>
+    
 <style>
     body {
         font-family: 'Helvetica Neue';
     
     }
     </style>
+
+    script src="progressbar.js"></script>
+</head>
 <body>
+    <title>Progress Bar Vanilla Javascript Practise</title>
+<progress-bar></progress-bar>
+
+<script>
+    (function() {
+        const progressInterval = setInterval (() => {
+            complete += 1;
+
+            if (complete <= 100) {
+                progress.setAttribute(`complete', complete);
+                } else {
+                    clearInterval(progressInterval);
+                }
+            }, 100);
+        })();
+        </script>
     
 </body>
 </html>
